@@ -18,7 +18,7 @@
             var dataList11 = ${post11};
 
             $("#tDataTables").DataTable({
-                data: dataList,
+                data: dataList11,
                 columns: [
                     { data: "id" },
                     { data: "title" },
@@ -36,6 +36,16 @@
         <div class="row">
             <div class="col-md-6">
                 <a href="/posts/save" role="button" class="btn btn-primary">Write</a>
+
+                    <c:if test="${userName eq null}">
+                        <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">
+                            Google Login
+                        </a>
+					</c:if>
+                    <c:if test="${userName ne null}">
+                        Logged in as: <span id="user">{userName}</span>
+                        <a href="/logout" class="btn btn-info active" role="button"/>Logout</a>
+                     </c:if>
             </div>
         </div>
         <br>

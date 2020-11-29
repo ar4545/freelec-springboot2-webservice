@@ -40,6 +40,9 @@ dependencies {
     compile('com.h2database:h2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
+    // oauth
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+
     //mustache
     //compile('org.springframework.boot:spring-boot-starter-mustache')
 }
